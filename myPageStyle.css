@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+  transition: 0.3s;
+}
+
+.navi {
+  overflow: hidden;
+  background-color: beige;
+}
+
+.navi > ul {
+  float: right;
+}
+
+.navi > h3 {
+  float: left;
+}
+
+.navi > ul > li {
+  float: left;
+  margin-right: 30px;
+}
+
+.main {
+  margin-top: 50px;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-left: -250px;
+}
+
+.profilePage {
+  overflow: hidden;
+}
+
+#mypicture {
+  width: 300px;
+  height: 450px;
+  margin-right: 0;
+  border: 2px solid #000000;
+  border-radius: 10px;
+}
+.intro {
+  width: 390px;
+  float: right;
+  margin-left: 1px;
+  font-size: 15px;
+}
+
+/*value & career page css*/
+
+/*.valueAndCareerPage {
+  margin-top: 100px;
+}*/
+.myvalue {
+  overflow: hidden;
+}
+
+.icon {
+  float: left;
+  width: 100px;
+  height: 100px;
+
+  border: 2px solid #000000;
+  border-radius: 10px;
+}
+
+.value-intro {
+  float: left;
+  margin-left: 50px;
+}
+
+.PageTitle {
+  font-size: 30px;
+}
+
+.value-menu {
+  font-size: 20px;
+}
+
+/*tmi page css*/
+
+/*.Tmi_page {
+  margin-top: 100px;
+}*/
+
+.tmi-menu {
+  font-size: 20px;
+}

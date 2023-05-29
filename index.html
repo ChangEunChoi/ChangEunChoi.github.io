@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, maximum-scale=1, initial-scale=1.0 , width =device-width"
+    />
+    <title>Document</title>
+    <!--일반 모드에서 쓸 css-->
+    <link rel="stylesheet" href="./myPageStyle.css" />
+    <!--아래쪽 css는 모바일용-->
+    <style>
+      @media screen and (max-width: 767px) {
+        .navi {
+          width: auto;
+          background-color: beige;
+        }
+
+        .navi > ul {
+          float: none;
+        }
+
+        .navi > h3 {
+          float: none;
+        }
+
+        .navi > ul > li {
+          float: none;
+        }
+
+        .main {
+          width: auto;
+        }
+
+        .profilePage {
+          width: 320px;
+          position: absolute;
+          left: 50%;
+          right: 50%;
+        }
+
+        #mypicture {
+          width: 200px;
+          height: auto;
+          border: 2px solid #000000;
+          border-radius: 10px;
+        }
+        .intro {
+          width: auto;
+          float: none;
+          margin-left: 1px;
+          font-size: 13px;
+        }
+
+        /*value & career page css*/
+        .valueAndCareerPage {
+          width: 320px;
+          position: absolute;
+          left: 50%;
+          right: 50%;
+        }
+        .myvalue {
+          overflow: hidden;
+        }
+
+        .icon {
+          float: left;
+          width: 50px;
+          height: 50px;
+
+          border: 2px solid #000000;
+          border-radius: 10px;
+        }
+
+        .value-intro {
+          float: left;
+        }
+
+        .PageTitle {
+          font-size: 30px;
+        }
+
+        .value-menu {
+          font-size: 20px;
+        }
+
+        .myCareer > ul {
+          margin-left: 0px;
+          padding-left: 0px;
+        }
+        .myCareer > ul > li {
+          font-size: 10px;
+        }
+
+        /*tmi page css*/
+        .Tmi_page {
+          width: 320px;
+          position: absolute;
+          left: 50%;
+          right: 50%;
+        }
+
+        .tmi-menu {
+          font-size: 20px;
+        }
+        .icon_tmi {
+          width: 200px;
+          height: auto;
+          border: 2px solid #000000;
+          border-radius: 10px;
+        }
+        .exp_tmi {
+          font-size: 10px;
+        }
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        function routeByJavascript() {
+          var hString = window.location.hash;
+          if (hString === "#intro") {
+            document.getElementById("main").innerHTML = `
+          <div class="profilePage">
+            <h5 class="PageTitle">Introduce me</h5>
+          <img id="mypicture" src="202110735 최창은.jpg" />
+          <div class="intro">
+            <h2>INFO</h2>
+            <p>
+              안녕하세요! 웹 풀스택 개발자가 목표인<br />
+              컴퓨터공학과 재학생 최창은 입니다:)<br />
+              아직 프론트엔드와 백엔드 모두 미숙하지만<br />
+              내년에 저를 돌아봤을 때 지금의 저보다 <br />
+              더 나은 제가 될 수 있도록 노력하겠습니다.
+            </p>
+            <h2>TECH STACK</h2>
+            <p id="capability">
+              Java<br />Python<br />AndroidStudio<br />Pandas<br />Numpy
+            </p>
+          </div>
+        </div>
+            `;
+          } else if (hString === "#valueCareer") {
+            document.getElementById("main").innerHTML = `
+          <div class
+        ="valueAndCareerPage">
+
+        <h5 class="PageTitle">My value & Career</h5>
+        <h6 class="value-menu">value</h6>
+          <div class="myvalue">
+            <img class="icon" src="responsibility.png" />
+            <div class="value-intro">
+              <h4 class="value-name">RESPONSIBILITY</h4>
+
+            </div>
+          </div>
+
+        <!--about me-->
+          <div class="myvalue">
+            <img class="icon" src="hardworking.png" />
+            <div class="value-intro">
+              <h4 class="value-name">HARDWORKING</h4>
+
+            </div>
+          </div>
+          <div class="myvalue">
+            <img class="icon" src="together.png" />
+            <div class="value-intro">
+              <h4 class="value-name">COOPERATION </h4>
+
+            </div>
+          </div>
+          <h6 class="value-menu">Careers</h6>
+            <div class ="myCareer">
+                <ul>
+                    <li>서울 신일고등학교 졸업</li>
+                    <li>강원대 컴퓨터공학과 재학중</li>
+                    <li>2021 코드잇 대학생 코딩캠프 수료</li>
+                    <li>2022 KNU 부트캠프 수료 및 우수상</li>
+                    <li>2022 KNU SW MCS(전공역량강화 팀프로젝트) 1기 활동</li>
+                    <li>2022 뉴질랜드 AUT대학 English Language Coures 수료</li>
+                    <li>2022년 1학기 BEST KNU 선정(학과 전액 성적장학금)</li>
+                    <li>2022 코드트리 알고리즘 캠프 수료</li>
+                    <li>2023 IT대학 자바프로그래밍 교육 수료</li>
+                    <li>2023 전국 연합 웹 개발 동아리 "멋쟁이사자처럼" 11기 활동중</li>
+                </ul>
+            </div>
+            `;
+          } else if (hString === "#tmi") {
+            document.getElementById("main").innerHTML = `
+          <div class="Tmi_page">
+            <h5 class="PageTitle">TMI About Me</h5>
+            <h6 class="tmi-menu">MBTI</h6>
+            <div class="tmi">
+              <img class="icon_tmi" src="recruitment.png" />
+              <div class="intro_tmi">
+                <p class="exp_tmi">
+                  : 저의 MBTI는 ISFJ입니다. <br />
+                  만난지 얼마 안됐을 때는 어색해 말을 많이 안하지만<br />
+                  몇 번 만나다보면 금방 말이 많아지니<br /> 
+                  조금만 기다려주세요:)
+                </p>
+              </div>
+            </div>
+
+            <h6 class="tmi-menu">HOBBY</h6>
+
+            <div class="tmi">
+              <img class="icon_tmi" src="player.png" />
+              <div class="intro_tmi">
+                <p class="exp_tmi">
+                  : 제 취미는 야구입니다. 보는 것도 하는 것도 매우 좋아합니다.<br />
+                  같이 캐치볼 하거나 야구보러 가실 분 언제든 말걸어 주세요!!<br /> 
+                  대환영 입니다:D
+                </p>
+              </div>
+            </div>
+
+            <h6 class="tmi-menu">FAVORITE</h6>
+
+            <div class="tmi">
+              <img class="icon_tmi" src="travel.png" />
+              <div class="intro_tmi">
+                <p class="exp_tmi">
+                  : 제가 가장 좋아하는 것은 여행입니다. <br  />
+                  수능 후 일본 배낭여행에 도전해 본 뒤<br />
+                  여행의 매력에 푹 빠져 지금까지 십수번의 여행을 다녀왔어요!!<br />
+                  앞으로 죽기 전 세계를 일주해 보는 것이<br /> 
+                  제가 가장 바라는 소원 중 하나입니다:)
+                </p>
+              </div>
+            </div>
+          </div>
+            `;
+          }
+        }
+        window.addEventListener("hashchange", routeByJavascript);
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="navi">
+        <h3 class="name">ChangeunChoi's Page</h3>
+        <ul>
+          <li><a id="menu1" class="nav-menu" href="#intro">Intro</a></li>
+          <li>
+            <a id="menu2" class="nav-menu" href="#valueCareer"
+              >value & career</a
+            >
+          </li>
+          <li><a id="menu3" class="nav-menu" href="#tmi">TMI</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="main" class="main">
+      <!-- 동적으로 변경되는 내용이 들어갈 공간 -->
+      <div class="profilePage">
+        <h5 class="PageTitle">Introduce me</h5>
+        <img id="mypicture" src="202110735 최창은.jpg" />
+        <div class="intro">
+          <h2>INFO</h2>
+          <p>
+            안녕하세요! 웹 풀스택 개발자가 목표인<br />
+            컴퓨터공학과 재학생 최창은 입니다:)<br />
+            아직 프론트엔드와 백엔드 모두 미숙하지만<br />
+            내년에 저를 돌아봤을 때 지금의 저보다 <br />
+            더 나은 제가 될 수 있도록 노력하겠습니다.
+          </p>
+          <h2>TECH STACK</h2>
+          <p id="capability">
+            Java<br />Python<br />AndroidStudio<br />Pandas<br />Numpy
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
